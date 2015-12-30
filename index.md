@@ -22,6 +22,7 @@ subtitle: 파이썬, 리보그, 러플
 		
 1.  [프로그래밍 소개](cp-intro.html)
 1.  [명예의 전당](cp-hall-of-fame.html)
+1.  [나는 어디에 있나?](cp-where-am-i.html)
 
 > ## 참고 문헌 {.prereq}
 >
