@@ -24,6 +24,7 @@ subtitle: 파이썬, 리보그, 러플
 1.  [명예의 전당](cp-hall-of-fame.html)
 1.  [나는 어디에 있나?](cp-where-am-i.html)
 1.  [문자열](cp-strings.html)
+1.  [정수](cp-integers.html)
 
 > ## 참고 문헌 {.prereq}
 >
