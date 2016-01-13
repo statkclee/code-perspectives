@@ -3,36 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="generator" content="pandoc">
-    <title>Software Carpentry: 프로그래밍과 문제해결</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.css" />
-    <link rel="stylesheet" type="text/css" href="css/swc.css" />
-    <link rel="alternate" type="application/rss+xml" title="Software Carpentry Blog" href="http://software-carpentry.org/feed.xml"/>
-    <meta charset="UTF-8" />
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
-      ga('create', 'UA-59802572-7', 'auto');
-      ga('send', 'pageview');
-    
+    <title>xwMOOC: 프로그래밍과 문제해결</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/swc.css" />
+    <link rel="alternate" type="application/rss+xml" title="Software Carpentry Blog" href="http://software-carpentry.org/feed.xml"/>
+    <meta charset="UTF-8" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
     </script>
   </head>
   <body class="lesson">
     <div class="container card">
-      <div class="banner">
-        <a href="http://xwmooc.net" title="xwMOOC">
-          <img alt="xwMOOC banner" src="img/xwMOOC.png" />
-        </a>
+      <div class="banner">
+        <a href="http://xwmooc.net" title="xwMOOC">
+          <img alt="xwMOOC banner" src="img/xwMOOC.png" />
+        </a>
       </div>
       <article>
       <div class="row">
@@ -42,7 +33,7 @@
 <p>언제나 <a href="http://www.xwmooc.net/">xwMOOC</a>는 기계와의 경쟁을 준비하는 한국인을 위한 최고의 콘텐츠를 제공합니다.</p>
 <section class="getready panel panel-warning">
 <div class="panel-heading">
-<h3 id="영어-원문-및-한국어-번역-사용허가권"><span class="glyphicon glyphicon-check"></span>영어 원문 및 한국어 번역 사용허가권</h3>
+<h3><span class="glyphicon glyphicon-check"></span>영어 원문 및 한국어 번역 사용허가권</h3>
 </div>
 <div class="panel-body">
 <p>이 번역의 원작 “Programming and Problem Solving”는 원저자 안드레 카스타노(Andres Castano, <a href="http://home.acastano.com/">home.acastano.com/</a>)가 영어로 출판하였으며, 번역자 이광춘이 원저자 안드레의 허락을 받아서 번역을 하였습니다. 이 책은 크리에이티브 커먼스(Creative Commons)의 비영리( NC, Non-Commercial), 변경금지(ND, No Derivatives) 라이선스(<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" class="uri">https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode</a>)에 따라서 활용할 수 있습니다.</p>
@@ -51,7 +42,7 @@
 </section>
 <section class="getready panel panel-warning">
 <div class="panel-heading">
-<h2 id="준비물"><span class="glyphicon glyphicon-check"></span>준비물</h2>
+<h2><span class="glyphicon glyphicon-check"></span>준비물</h2>
 </div>
 <div class="panel-body">
 <p><a href="http://raspberrypi.org/">라즈베리 파이 컴퓨터</a></p>
@@ -64,10 +55,11 @@
 <li><a href="cp-where-am-i.html">나는 어디에 있나?</a></li>
 <li><a href="cp-strings.html">문자열</a></li>
 <li><a href="cp-integers.html">정수</a></li>
+<li><a href="cp-karel-reeborg.html">카렐, 리보그 세상</a></li>
 </ol>
 <section class="prereq panel panel-warning">
 <div class="panel-heading">
-<h2 id="참고-문헌"><span class="glyphicon glyphicon-education"></span>참고 문헌</h2>
+<h2><span class="glyphicon glyphicon-education"></span>참고 문헌</h2>
 </div>
 <div class="panel-body">
 <ul>
@@ -97,15 +89,15 @@
         </div>
       </div>
       </article>
-      <div class="footer">
-        <a class="label swc-blue-bg" href="http://xwmooc.net">xwMOOC</a>
-        <a class="label swc-blue-bg" href="https://github.com/statkclee/raspberry-pi">Source</a>
-        <a class="label swc-blue-bg" href="mailto:i@xwmooc.net">Contact</a>
-        <a class="label swc-blue-bg" href="LICENSE.html">License</a>
+      <div class="footer">
+        <a class="label swc-blue-bg" href="http://xwmooc.net">xwMOOC</a>
+        <a class="label swc-blue-bg" href="https://github.com/statkclee/raspberry-pi">Source</a>
+        <a class="label swc-blue-bg" href="mailto:i@xwmooc.net">Contact</a>
+        <a class="label swc-blue-bg" href="LICENSE.html">License</a>
       </div>
     </div>
-    <!-- Javascript placed at the end of the document so the pages load faster -->
-    <script src="http://software-carpentry.org/v5/js/jquery-1.9.1.min.js"></script>
+    <!-- Javascript placed at the end of the document so the pages load faster -->
+    <script src="http://software-carpentry.org/v5/js/jquery-1.9.1.min.js"></script>
     <script src="css/bootstrap/bootstrap-js/bootstrap.js"></script>
   </body>
 </html>

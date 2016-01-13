@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="generator" content="pandoc">
-    <title>Software Carpentry: 프로그래밍과 문제해결</title>
+    <title>xwMOOC: 프로그래밍과 문제해결</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
@@ -15,15 +15,6 @@
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
-      ga('create', 'UA-59802572-7', 'auto');
-      ga('send', 'pageview');
     
     </script>
   </head>
@@ -67,7 +58,7 @@ number_2 = <span class="dv">3</span></code></pre>
 <span class="dv">5</span> - <span class="dv">3</span> = <span class="dv">2</span>
 <span class="dv">3</span> - <span class="dv">5</span> = -<span class="dv">2</span>
 <span class="dv">5</span> * <span class="dv">3</span> = <span class="dv">15</span></code></pre>
-<p><img src="fig/numbers-738068_640-300x169" width="45%" /></p>
+<p><img src="fig/numbers-738068_640-300x169.jpg" width="45%" /></p>
 <p>해답: <a href="http://www.codeskulptor.org/#user40_hgc1fHOzrLZhZRE.py">보여주기</a></p>
 <h3 id="학년---이빨-요청-1">4학년 - 이빨 요청 <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></h3>
 <p><a href="http://www.codeskulptor.org/#user40_Lns5UBKZUCA6JqC.py">학습 교안</a></p>
@@ -77,11 +68,61 @@ number_2 = <span class="dv">3</span></code></pre>
 present = $<span class="dv">2</span>
 total = $<span class="dv">40</span></code></pre>
 <p>이제 어려운 문제로 가자: 일생동안 <a href="http://wonderopolis.org/wonder/how-many-teeth-do-sharks-have/">일부 상어는 이빨이 50,000 개</a>가 빠진다. 여러분이 만일 이빨 50,000 개가 빠진다면 이빨요정은 얼마의 돈을 놓고 갈지 알아내시오. 만약 이빨 하나당 $2 달러 대신에 $5 달러라면 얼마의 돈을 놓고 갈까?</p>
-<p><img src="fig/shark-47634_640" width="30%" /></p>
+<p><img src="fig/shark-47634_640.png" width="30%" /></p>
 <p>정답: <a href="http://www.codeskulptor.org/#user40_wR2qHk7aabEujiR.py">보여주기</a></p>
-<h3 id="학년-던젼-앤드-드래곤dungeons-and-dragons">5 학년 : 던젼 앤드 드래곤(Dungeons and Dragons)</h3>
+<h3 id="학년-던젼-앤-드래곤dungeons-and-dragons">5 학년 : 던젼 앤 드래곤(Dungeons and Dragons)</h3>
 <p><a href="http://www.codeskulptor.org/#user40_ico0wo4NCJS1kR8.py">학습 교안</a></p>
 <p><code>던젼 앤드 드래곤</code>은 인간, 요정, 난장이 역할을 맡아 모험을 떠나는 게임이다. 흡혈귀로 가득찬 버려진 유적, 혹은 용이 지키고 있는 보물동굴을 탐험해 나간다.</p>
+<p>드래곤 용이 먼저 여러분을 보거나, 혹은 여러분이 용을 제때 탐지할까요? 여러분이 도둑이이고 정말 뛰어난 인지능력을 보유한다면, 20면 주사위를 굴려 8이상 값이 나오면 용을 먼저탐지하고, 여러분이 팔라딘 용사라면, 대신에 먼저 용을 탐지하려면 19이상 값이 나와야 한다.</p>
+<p>20면 주사위라고? 맞습니다… 던젼 앤 드래곤에는 4, 6, 8, 10, 20 면 주사위가 사용된다; 더젼 앤 드래곤(D&amp;D) 주사위를 굴리는 프로그램을 작성할 것이다. <code>a</code> 와 <code>b</code> 사이 숫자를 뽑아내는데 <code>randint(a, b)</code> 함수를 사용한다.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="co">#  randint 함수를 사용하려면 random 라이브러리를 불러와서 메모리에 적재한다.</span>
+<span class="ch">from</span> random <span class="ch">import</span> randint   
+ 
+roll = randint(<span class="dv">5</span>,<span class="dv">10</span>)         <span class="co"># randint 함수를 사용한다.</span></code></pre>
+<p>상기 함수는 5,6,7,8.9,10 값 중 하나를 변수 <code>roll</code>에 할당한다.</p>
+<p>다음 주사위 6개를 굴려서, 다음과 같은 형식으로 굴린 결과를 출력하는 프로그램을 작성한다:</p>
+<pre class="output"><code>You rolled a 2 with the 4-side die
+You rolled a 5 with the 6-side die
+You rolled a 3 with the 8-side die
+You rolled a 10 with the 12-side die
+You rolled a 13 with the 20-side die</code></pre>
+<p><img src="fig/512px-Dice_(typical_role_playing_game_dice).jpg" width="40%" /></p>
+<p>정답: <a href="http://www.codeskulptor.org/#user40_IWv3yPWlt1xWTed.py">보여주기</a></p>
+<h3 id="학년-1000000-까지-모든-숫자를-합한다.">6학년: 1,000,000 까지 모든 숫자를 합한다.</h3>
+<p><a href="http://www.codeskulptor.org/#user40_wa0rYnT0CpOaSkB.py">학습 교안</a></p>
+<p>제정신인가요? 백만은 엄청나게 큰 수라서… 제가 어떻게 백만까지 더할 수 있다고 보십니까? 그러면… 좀더 작은 숫자부터 시작해 봅시다. 6까지 모든 숫자를 더하는 것은 어떨까요? 가장 무식(?)한 방식으로 해볼까요?</p>
+<pre class="output"><code>1 + 2 + 3 + 4 + 5 + 6 = 21</code></pre>
+<p>상기 방식이 동작은 하지만, 백만까지 더해나가는 것이 그다지 희망이 있어 보이지는 않는다. 실수도 저지를 수 있고 해서 말이다. 다른 숫자 위에 숫자를 쌓아보자. 변수 <code>x</code> 를 사용해서 모든 숫자를 더한 총합으로 표기한다; 지금 당장, 총합은 모르는 척 하자.</p>
+<p><sub>~</sub> {.output} 1 2 3 4 5 + 6 —— x <sub>~</sub></p>
+<p>숫자를 1에서부터 6까지 더해 <code>x</code>를 구하고 나서, 두번 숫자를 더하면 결과는 <code>2x</code>가 된다; 하지만, 한 칼럼 숫자는 거꾸로 더해 나간다; 하지만, 결과에는 차이가 나지 않는다.</p>
+<pre class="output"><code>   1+6
+   2+5
+   3+4
+   4+3
+   5+2
++ 6+1
+-------
+   2x</code></pre>
+<p>모든 행이 더하면 같은 값 즉, 7이 됨에 주목한다. 본질은, 6까지 더한 것을 7번 수행했다:</p>
+<pre class="output"><code>   7
+   7
+   7
+   7
+   7
++ 7
+-----
+  2x</code></pre>
+<p>상기 계산은 6 곱하기 7이 <code>2x</code>가 됨을 의미한다:</p>
+<pre class="output"><code>7 + 7 + 7 + 7 + 7 + 7 = 2x
+6 * 7 = 2x</code></pre>
+<p>그래서, 수식을 전개하면,</p>
+<pre class="output"><code>x = (6 * 7) / 2 # 수식을 주의깊이 살펴본다. 6과 어떤 관계가 있는가?
+  = 42 / 2
+  = 21</code></pre>
+<p>희망이 있어 보인다. 종이와 연필을 가지고 동일한 과정을 반복하지만, 이번에는 1에서 7까지 숫자합을 구해본다.</p>
+<p>이 기법을 사용해서 1에서 1,000,000 까지 모든 숫자 합계를 구하는 프로그램을 작성한다. 테스트로, 1에서 25,000까지 숫자 총합은 312,512,500 이 나와야 한다.</p>
+<p><img src="fig/money-163502_640.jpg" width="40%" /></p>
+<p>정답: <a href="http://www.codeskulptor.org/#user40_02pGs5m2g48ZVZM.py">보여주기</a></p>
 <div class="footnotes">
 <hr />
 <ol>
