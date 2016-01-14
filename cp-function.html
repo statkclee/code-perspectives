@@ -71,7 +71,7 @@ foo()             <span class="co"># foo() 함수를 호출한다.</span></code>
 <pre class="sourceCode python"><code class="sourceCode python">sidestep_right()  <span class="co"># 최초 방향을 유지하며 오른쪽 셀로 이동</span>
 sidestep_left()   <span class="co"># 최초 방향을 유지하며 왼쪽 셀로 이동</span></code></pre>
 <h3 id="훈련-작업임무">훈련 작업임무</h3>
-<h4 id="남가주socal-생활---터치다운">남가주(SoCal) 생활 - 터치다운</h4>
+<h4 id="tm1.-남가주socal-생활---터치다운">TM1. 남가주(SoCal) 생활 - 터치다운</h4>
 <p><a href="http://codeperspectives.com/reeborg-dev/world.html?proglang=python-en&amp;world=%7B%22robots%22%3A%5B%7B%22x%22%3A7%2C%22y%22%3A2%2C%22tokens%22%3A0%2C%22orientation%22%3A1%2C%22_prev_x%22%3A7%2C%22_prev_y%22%3A2%2C%22_prev_orientation%22%3A1%7D%5D%2C%22tokens%22%3A%7B%227%2C5%22%3A1%7D%2C%22walls%22%3A%7B%226%2C11%22%3A%5B%22north%22%5D%2C%227%2C11%22%3A%5B%22north%22%5D%2C%228%2C11%22%3A%5B%22north%22%5D%2C%229%2C11%22%3A%5B%22north%22%2C%22east%22%5D%2C%225%2C11%22%3A%5B%22north%22%5D%2C%224%2C11%22%3A%5B%22east%22%5D%7D%2C%22shapes%22%3A%7B%224%2C11%22%3A%22star%22%2C%2210%2C11%22%3A%22star%22%7D%2C%22goal%22%3A%7B%22position%22%3A%7B%22x%22%3A7%2C%22y%22%3A11%7D%2C%22tokens%22%3A%7B%227%2C11%22%3A1%7D%7D%7D&amp;editor=%23%20single%20file%0A%23%20pick%20up%20the%20football%20and%20score%20a%20touchdown&amp;library=%23%20%27from%20my_lib%20import%20*%27%20in%20Python%20Code%20is%20required%20to%20use%0A%23%20the%20code%20in%20this%20library.%20%0A%0Asound(True)%20%20%20%20%23%20turn%20sound%20effects%20on%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%20%20%20%20%0Adef%20turn_around()%3A%0A%20%20%20%20repeat(turn_left%2C%202)%0A%20%20%20%20%0Adef%20right()%3A%0A%20%20%20%20repeat(turn_left%2C%203)%0A%20%20%20%20%0Adef%20sidestep_right()%3A%0A%20%20%20%20right()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20%0Adef%20sidestep_left()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20right()">학생 교안</a></p>
 <p>이번 작업임무에서, 독립적인 조작으로 문제를 쪼개는데 함수를 사용한다.</p>
 <p>카렐이 공을 집어 들고 터치다운을 해야 한다. 작성해 본다!</p>
@@ -128,6 +128,179 @@ go_to_ball()
 pick_ball_up()
 go_to_endzone()
 score()</code></pre>
+<h4 id="tm2.-딸기---단일-파일">TM2. 딸기 - 단일 파일</h4>
+<p><a href="http://codeperspectives.com/reeborg-dev/world.html?proglang=python-en&amp;world=%7B%22robots%22%3A%5B%7B%22x%22%3A4%2C%22y%22%3A5%2C%22tokens%22%3A70%2C%22orientation%22%3A1%2C%22_prev_x%22%3A4%2C%22_prev_y%22%3A5%2C%22_prev_orientation%22%3A1%7D%5D%2C%22tokens%22%3A%7B%7D%2C%22walls%22%3A%7B%225%2C6%22%3A%5B%22north%22%5D%2C%226%2C6%22%3A%5B%22north%22%5D%2C%227%2C6%22%3A%5B%22north%22%5D%2C%228%2C6%22%3A%5B%22north%22%5D%2C%229%2C6%22%3A%5B%22north%22%5D%2C%2210%2C6%22%3A%5B%22north%22%5D%2C%2211%2C6%22%3A%5B%22north%22%5D%7D%2C%22goal%22%3A%7B%22position%22%3A%7B%22x%22%3A12%2C%22y%22%3A5%7D%2C%22tokens%22%3A%7B%225%2C5%22%3A10%2C%226%2C5%22%3A10%2C%227%2C5%22%3A10%2C%228%2C5%22%3A10%2C%229%2C5%22%3A10%2C%2210%2C5%22%3A10%2C%2211%2C5%22%3A10%7D%7D%7D&amp;editor=%23%20tm2%20single%20file%0A%23%20plant%2010%20berries%20in%20each%20slot%20and%20then%20go%20home%0Asound(True)%0Athink(251)&amp;library=%23%20%27from%20my_lib%20import%20*%27%20in%20Python%20Code%20is%20required%20to%20use%0A%23%20the%20code%20in%20this%20library.%20%0A%0Asound(True)%20%20%20%20%23%20turn%20sound%20effects%20on%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%20%20%20%20%0Adef%20turn_around()%3A%0A%20%20%20%20repeat(turn_left%2C%202)%0A%20%20%20%20%0Adef%20right()%3A%0A%20%20%20%20repeat(turn_left%2C%203)%0A%20%20%20%20%0Adef%20sidestep_right()%3A%0A%20%20%20%20right()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20%0Adef%20sidestep_left()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20right()">학습 교안</a></p>
+<p><img src="fig/berry-197078_640-624x468.jpg" width="35%" /></p>
+<p>이번 작업임무에서, 함수를 사용해서 패턴을 기술할 것이다.</p>
+<p>카렐은 집앞 7개 각셀에 딸기 10개를 파종하고자 한다. 카렐은 가방에 70개 딸기씨를 가지고 출발한다. 카렐은 최고 딸기 농부가 되서, 집으로 돌아와야 된다.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">출발전 - 딸기 파종준비</th>
+<th align="left">종료후 - 딸기 파종완료</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><img src="fig/1-tm2-single-file.png" width="100%" /></td>
+<td align="left"><img src="fig/1-tm2-single-file-solution.png" width="100%" /></td>
+</tr>
+</tbody>
+</table>
+<p>해답: <a href="http://codeperspectives.com/reeborg-dev/world.html?proglang=python-en&amp;world=%7B%22robots%22%3A%5B%7B%22x%22%3A4%2C%22y%22%3A5%2C%22tokens%22%3A70%2C%22orientation%22%3A1%2C%22_prev_x%22%3A4%2C%22_prev_y%22%3A5%2C%22_prev_orientation%22%3A1%7D%5D%2C%22tokens%22%3A%7B%7D%2C%22walls%22%3A%7B%225%2C6%22%3A%5B%22north%22%5D%2C%226%2C6%22%3A%5B%22north%22%5D%2C%227%2C6%22%3A%5B%22north%22%5D%2C%228%2C6%22%3A%5B%22north%22%5D%2C%229%2C6%22%3A%5B%22north%22%5D%2C%2210%2C6%22%3A%5B%22north%22%5D%2C%2211%2C6%22%3A%5B%22north%22%5D%7D%2C%22goal%22%3A%7B%22position%22%3A%7B%22x%22%3A12%2C%22y%22%3A5%7D%2C%22tokens%22%3A%7B%225%2C5%22%3A10%2C%226%2C5%22%3A10%2C%227%2C5%22%3A10%2C%228%2C5%22%3A10%2C%229%2C5%22%3A10%2C%2210%2C5%22%3A10%2C%2211%2C5%22%3A10%7D%7D%7D&amp;editor=%23%20tm2%20single%20file%0A%23%20plant%2010%20berries%20in%20each%20slot%20and%20then%20go%20home%0Asound(True)%0Athink(251)%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%0Adef%20right()%3A%0A%20%20%20%20repeat(%20left%2C%203%20)%0A%0Adef%20move_and_put()%3A%0A%20%20%20%20move()%0A%20%20%20%20repeat(%20put%2C%2010%20)%0A%0Adef%20plant_berries()%3A%0A%20%20%20%20repeat(%20move_and_put%2C%207%20)%0A%0Adef%20go_home()%3A%0A%20%20%20%20move()%0A%0A%23%20main%20function%0Aright()%0Aplant_berries()%0Ago_home()&amp;library=%23%20%27from%20my_lib%20import%20*%27%20in%20Python%20Code%20is%20required%20to%20use%0A%23%20the%20code%20in%20this%20library.%20%0A%0Asound(True)%20%20%20%20%23%20turn%20sound%20effects%20on%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%20%20%20%20%0Adef%20turn_around()%3A%0A%20%20%20%20repeat(turn_left%2C%202)%0A%20%20%20%20%0Adef%20right()%3A%0A%20%20%20%20repeat(turn_left%2C%203)%0A%20%20%20%20%0Adef%20sidestep_right()%3A%0A%20%20%20%20right()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20%0Adef%20sidestep_left()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20right()">보여주기</a></p>
+<p>메인 프로그램은 카렐이 우회전하고 나서, 딸기 파종을 모두 마치고 나서, 집으로 돌아간다. 다음 프로그램은 완전히 <code>최상단</code>에서 문제를 해결한다.</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 메인 함수</span>
+right()
+plant_berries()
+go_home()</code></pre>
+<p>이제, <code>최상단</code> 하위문제를 차례로 해결해 나가자. 우회전 하는 명령어가 없지만, 좌회전을 3번 하면 사실상 우회전하는 효과가 난다. 프로그램을 좀더 가독성 있게 만들려면, <code>turn_left()</code> 함수에 별명을 붙이고, 이를 <code>right()</code> 함수 작성에 사용한다:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> left():
+    turn_left()
+ 
+<span class="kw">def</span> right():
+    repeat( left, <span class="dv">3</span> )</code></pre>
+<p>딸기를 심는 방식이 두가지 있다. 첫번째 방식은, 카렐이 수행할 작업을 쭉 적어나간다; 두번째 방식은, 패턴을 찾아, 패턴을 기술하는 함수를 작성하고 나서, 함수를 사용한다. 분명히, 두번째 접근법이 첫번째 것보다 낫다.</p>
+<p><strong>첫번째 방법: 버젼 1</strong></p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> pick_up_berries():
+    move()
+    repeat( put, <span class="dv">10</span> )
+    move()
+    repeat( put, <span class="dv">10</span> )
+    move()
+    repeat( put, <span class="dv">10</span> )
+    move()
+    repeat( put, <span class="dv">10</span> )
+    move()
+    repeat( put, <span class="dv">10</span> )
+    move()
+    repeat( put, <span class="dv">10</span> )
+    move()
+    repeat( put, <span class="dv">10</span> )</code></pre>
+<p><strong>두번째 방법: 버젼 1</strong></p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> move_and_put():
+    move()
+    repeat( put, <span class="dv">10</span> )
+ 
+<span class="kw">def</span> plant_berries():
+    repeat( move_and_put, <span class="dv">7</span> )</code></pre>
+<p>딸기를 모두 파종한 후에, 카렐은 사각형 집 좌측 셀에 위치하게 된다. 따라서, <code>go_home()</code> 은 단순히 <code>move()</code> 명령어에 대한 별명이 된다. 최종 완성된 프로그램은 다음과 같다:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> left():
+    turn_left()
+ 
+<span class="kw">def</span> right():
+    repeat( left, <span class="dv">3</span> )
+ 
+<span class="kw">def</span> move_and_put():
+    move()
+    repeat( put, <span class="dv">10</span> )
+ 
+<span class="kw">def</span> plant_berries():
+    repeat( move_and_put, <span class="dv">7</span> )
+ 
+<span class="kw">def</span> go_home():
+    move()
+ 
+<span class="co"># 메인 함수</span>
+right()
+plant_berries()
+go_home()</code></pre>
+<h4 id="학년---잃어버린-거위-새끼">3학년 - 잃어버린 거위 새끼</h4>
+<p><a href="http://codeperspectives.com/reeborg-dev/world.html?proglang=python-en&amp;world=%7B%22robots%22%3A%5B%7B%22x%22%3A3%2C%22y%22%3A3%2C%22tokens%22%3A%22infinite%22%2C%22orientation%22%3A0%2C%22_prev_x%22%3A3%2C%22_prev_y%22%3A3%2C%22_prev_orientation%22%3A0%2C%22start_positions%22%3A%5B%5B3%2C3%5D%5D%7D%5D%2C%22walls%22%3A%7B%7D%2C%22tokens%22%3A%7B%224%2C3%22%3A1%7D%2C%22goal%22%3A%7B%22tokens%22%3A%7B%224%2C4%22%3A1%7D%2C%22possible_positions%22%3A%5B%5B4%2C5%5D%5D%2C%22position%22%3A%7B%22x%22%3A4%2C%22y%22%3A5%7D%7D%7D&amp;editor=%23%20put%20the%20gosling%20in%20the%20pen%20and%20then%20go%20home&amp;library=%23%20%27from%20my_lib%20import%20*%27%20in%20Python%20Code%20is%20required%20to%20use%0A%23%20the%20code%20in%20this%20library.%20%0A%0Asound(True)%20%20%20%20%23%20turn%20sound%20effects%20on%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%20%20%20%20%0Adef%20turn_around()%3A%0A%20%20%20%20repeat(turn_left%2C%202)%0A%20%20%20%20%0Adef%20right()%3A%0A%20%20%20%20repeat(turn_left%2C%203)%0A%20%20%20%20%0Adef%20sidestep_right()%3A%0A%20%20%20%20right()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20%0Adef%20sidestep_left()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20right()">학습 교안</a></p>
+<p><img src="fig/gosling-810541_640-624x470.jpg" width="35%" /></p>
+<p>먼저 병아리, 이제는 거위 새끼! 우리에 구멍이 있음에 틀림없다. 카렐은 거위 새끼를 우리에 잡아 넣고 나서, 사각형 집으로 돌아와야 한다.</p>
+<p>힌트: 메인 프로그램은 다음과 같다:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 메인 프로그램</span>
+take_the_token()
+put_the_token()
+go_to_home_square()
+say( <span class="st">&quot;done&quot;</span> )</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">출발전 …</th>
+<th align="left">… 종료후</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><img src="fig/1-prog-a.png" width="100%" /></td>
+<td align="left"><img src="fig/1-prog-b.png" width="100%" /></td>
+</tr>
+</tbody>
+</table>
+<p>해답: <a href="http://codeperspectives.com/reeborg-dev/world.html?proglang=python-en&amp;world=%7B%22robots%22%3A%5B%7B%22x%22%3A3%2C%22y%22%3A3%2C%22tokens%22%3A%22infinite%22%2C%22orientation%22%3A0%2C%22_prev_x%22%3A3%2C%22_prev_y%22%3A3%2C%22_prev_orientation%22%3A0%2C%22start_positions%22%3A%5B%5B3%2C3%5D%5D%7D%5D%2C%22walls%22%3A%7B%7D%2C%22tokens%22%3A%7B%224%2C3%22%3A1%7D%2C%22goal%22%3A%7B%22tokens%22%3A%7B%224%2C4%22%3A1%7D%2C%22possible_positions%22%3A%5B%5B4%2C5%5D%5D%2C%22position%22%3A%7B%22x%22%3A4%2C%22y%22%3A5%7D%7D%7D&amp;editor=%23%20put%20the%20gosling%20in%20the%20pen%20and%20then%20go%20home%0Athink(%20900%20)%0A%20%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%20%0Adef%20take_the_token()%3A%0A%20%20%20%20say(%20%22taking%20the%20token%22%20)%0A%20%20%20%20move()%0A%20%20%20%20take()%0A%20%0Adef%20put_the_token()%3A%0A%20%20%20%20say(%20%22putting%20the%20token%22%20)%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20put()%0A%20%0Adef%20go_to_home_square()%3A%0A%20%20%20%20say(%20%22going%20home%22%20)%0A%20%20%20%20move()%0A%20%0A%23%20main%20program%0Atake_the_token()%0Aput_the_token()%0Ago_to_home_square()%0Asay(%20%22done%22%20)&amp;library=%23%20%27from%20my_lib%20import%20*%27%20in%20Python%20Code%20is%20required%20to%20use%0A%23%20the%20code%20in%20this%20library.%20%0A%0Asound(True)%20%20%20%20%23%20turn%20sound%20effects%20on%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%20%20%20%20%0Adef%20turn_around()%3A%0A%20%20%20%20repeat(turn_left%2C%202)%0A%20%20%20%20%0Adef%20right()%3A%0A%20%20%20%20repeat(turn_left%2C%203)%0A%20%20%20%20%0Adef%20sidestep_right()%3A%0A%20%20%20%20right()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20%0Adef%20sidestep_left()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20right()">보여주기</a></p>
+<h4 id="학년---대각선-정원">4학년 - 대각선 정원</h4>
+<p><a href="http://codeperspectives.com/reeborg-dev/world.html?proglang=python-en&amp;world=%7B%22robots%22%3A%5B%7B%22x%22%3A3%2C%22y%22%3A1%2C%22tokens%22%3A%22infinite%22%2C%22orientation%22%3A0%2C%22_prev_x%22%3A3%2C%22_prev_y%22%3A1%2C%22_prev_orientation%22%3A0%2C%22start_positions%22%3A%5B%5B3%2C1%5D%5D%7D%5D%2C%22walls%22%3A%7B%227%2C9%22%3A%5B%22east%22%5D%2C%228%2C9%22%3A%5B%22north%22%2C%22east%22%5D%7D%2C%22goal%22%3A%7B%22possible_positions%22%3A%5B%5B8%2C9%5D%5D%2C%22position%22%3A%7B%22x%22%3A8%2C%22y%22%3A9%7D%7D%2C%22tokens%22%3A%7B%223%2C3%22%3A3%2C%224%2C4%22%3A3%2C%225%2C5%22%3A3%2C%226%2C6%22%3A3%2C%227%2C7%22%3A3%7D%7D&amp;editor=%23%20strawberries%20-%20diagonal%20garden&amp;library=%23%20%27from%20my_lib%20import%20*%27%20in%20Python%20Code%20is%20required%20to%20use%0A%23%20the%20code%20in%20this%20library.%20%0A%0Asound(True)%20%20%20%20%23%20turn%20sound%20effects%20on%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%20%20%20%20%0Adef%20turn_around()%3A%0A%20%20%20%20repeat(turn_left%2C%202)%0A%20%20%20%20%0Adef%20right()%3A%0A%20%20%20%20repeat(turn_left%2C%203)%0A%20%20%20%20%0Adef%20sidestep_right()%3A%0A%20%20%20%20right()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20%0Adef%20sidestep_left()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20right()">학습 교안</a></p>
+<p><img src="fig/strawberries-706650_640-624x415.jpg" width="35%" /></p>
+<p>딸기를 수확해서, 카렐 집으로 귀향한다. 라이브러리 함수를 사용하면 프로그램은 매우 짧다.</p>
+<p>해답: <a href="http://codeperspectives.com/reeborg-dev/world.html?proglang=python-en&amp;world=%7B%22robots%22%3A%5B%7B%22x%22%3A3%2C%22y%22%3A1%2C%22tokens%22%3A%22infinite%22%2C%22orientation%22%3A0%2C%22_prev_x%22%3A3%2C%22_prev_y%22%3A1%2C%22_prev_orientation%22%3A0%2C%22start_positions%22%3A%5B%5B3%2C1%5D%5D%7D%5D%2C%22walls%22%3A%7B%227%2C9%22%3A%5B%22east%22%5D%2C%228%2C9%22%3A%5B%22north%22%2C%22east%22%5D%7D%2C%22goal%22%3A%7B%22possible_positions%22%3A%5B%5B8%2C9%5D%5D%2C%22position%22%3A%7B%22x%22%3A8%2C%22y%22%3A9%7D%7D%2C%22tokens%22%3A%7B%223%2C3%22%3A3%2C%224%2C4%22%3A3%2C%225%2C5%22%3A3%2C%226%2C6%22%3A3%2C%227%2C7%22%3A3%7D%7D&amp;editor=%23%20strawberries%20-%20diagonal%20garden%0Afrom%20my_lib%20import%20*%0Athink(300)%20%20%23%20delay%20between%20commands%20is%201%2F4%20s%0A%0Adef%20go_to_berries()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%0Adef%20take_berry()%3A%0A%20%20%20%20move()%0A%20%20%20%20repeat(take%2C%203)%0A%20%20%20%20sidestep_right()%0A%20%20%20%20%0Adef%20go_home()%3A%0A%20%20%20%20repeat(move%2C%202)%0A%0A%23%20main%20program%0Ago_to_berries()%0Arepeat(take_berry%2C%205)%0Ago_home()&amp;library=%23%20%27from%20my_lib%20import%20*%27%20in%20Python%20Code%20is%20required%20to%20use%0A%23%20the%20code%20in%20this%20library.%20%0A%0Asound(True)%20%20%20%20%23%20turn%20sound%20effects%20on%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%20%20%20%20%0Adef%20turn_around()%3A%0A%20%20%20%20repeat(turn_left%2C%202)%0A%20%20%20%20%0Adef%20right()%3A%0A%20%20%20%20repeat(turn_left%2C%203)%0A%20%20%20%20%0Adef%20sidestep_right()%3A%0A%20%20%20%20right()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20%0Adef%20sidestep_left()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20right()">보여주기</a></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">출발전 …</th>
+<th align="left">… 종료후</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><img src="fig/diagonal_garden.png" width="100%" /></td>
+<td align="left"><img src="fig/diagonal-garden-solution.png" width="100%" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>힌트:</strong></p>
+<p>함수를 사용해서 작업임무를 독립된 부분으로 쪼갠다. 메인 함수는 다음과 같을 수 있다:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="co"># 메인 프로그램</span>
+go_to_berries()
+repeat(take_berry, <span class="dv">5</span>)
+go_home()</code></pre>
+<h4 id="학년---딸기-비료">5학년 - 딸기 비료</h4>
+<p><a href="http://codeperspectives.com/reeborg-dev/world.html?proglang=python-en&amp;world=%7B%22robots%22%3A%5B%7B%22x%22%3A2%2C%22y%22%3A10%2C%22tokens%22%3A%22infinite%22%2C%22orientation%22%3A0%2C%22_prev_x%22%3A2%2C%22_prev_y%22%3A10%2C%22_prev_orientation%22%3A0%7D%5D%2C%22walls%22%3A%7B%2210%2C10%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C9%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C8%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C7%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C6%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C5%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C4%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C3%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C2%22%3A%5B%22north%22%5D%7D%2C%22goal%22%3A%7B%22position%22%3A%7B%22x%22%3A2%2C%22y%22%3A2%7D%2C%22tokens%22%3A%7B%2210%2C10%22%3A10%2C%2210%2C9%22%3A10%2C%2210%2C8%22%3A10%2C%2210%2C7%22%3A10%2C%2210%2C6%22%3A10%2C%2210%2C5%22%3A10%2C%2210%2C4%22%3A10%2C%2210%2C3%22%3A10%7D%7D%2C%22large_world%22%3Afalse%2C%22tokens%22%3A%7B%223%2C10%22%3A10%2C%223%2C9%22%3A10%2C%223%2C8%22%3A10%2C%223%2C7%22%3A10%2C%223%2C6%22%3A10%2C%223%2C5%22%3A10%2C%223%2C4%22%3A10%2C%223%2C3%22%3A10%7D%7D&amp;editor=%23%20fertilizer.%20Move%20the%20bags%20of%20fertilizer%20to%20their%20sheds&amp;library=%23%20%27from%20my_lib%20import%20*%27%20in%20Python%20Code%20is%20required%20to%20use%0A%23%20the%20code%20in%20this%20library.%20%0A%0Asound(True)%20%20%20%20%23%20turn%20sound%20effects%20on%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%20%20%20%20%0Adef%20turn_around()%3A%0A%20%20%20%20repeat(turn_left%2C%202)%0A%20%20%20%20%0Adef%20right()%3A%0A%20%20%20%20repeat(turn_left%2C%203)%0A%20%20%20%20%0Adef%20sidestep_right()%3A%0A%20%20%20%20right()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20%0Adef%20sidestep_left()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20right()">학습 교안</a></p>
+<p><img src="fig/torte-2243_640-624x415.jpg" width="35%" /></p>
+<p>이제 딸기에 비료를 주자. 카렐은 작업지시를 받아서 8개 돗짚자리에는 각각 비료상자 10개만 갖고 있는데, 각각을 대응되는 헛간에 저장해야 한다. 힘든 작업이지만, 맛난 딸기 쇼트케이크<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>를 먹고 싶다면, 딸기가 필요하다… 그래서…</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">출발전 …</th>
+<th align="left">… 종료후</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><img src="fig/1-4-fertilizer-300x300.png" width="100%" /></td>
+<td align="left"><img src="fig/1-4-fertilizer-solution-300x300.png" width="100%" /></td>
+</tr>
+</tbody>
+</table>
+<p><strong>힌트:</strong></p>
+<p>패턴을 기술하는데 함수를 사용한다.</p>
+<p>해답: <a href="http://codeperspectives.com/reeborg-dev/world.html?proglang=python-en&amp;world=%7B%22robots%22%3A%5B%7B%22x%22%3A2%2C%22y%22%3A10%2C%22tokens%22%3A%22infinite%22%2C%22orientation%22%3A0%2C%22_prev_x%22%3A2%2C%22_prev_y%22%3A10%2C%22_prev_orientation%22%3A0%7D%5D%2C%22walls%22%3A%7B%2210%2C10%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C9%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C8%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C7%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C6%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C5%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C4%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C3%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C2%22%3A%5B%22north%22%5D%7D%2C%22goal%22%3A%7B%22position%22%3A%7B%22x%22%3A2%2C%22y%22%3A2%7D%2C%22tokens%22%3A%7B%2210%2C10%22%3A10%2C%2210%2C9%22%3A10%2C%2210%2C8%22%3A10%2C%2210%2C7%22%3A10%2C%2210%2C6%22%3A10%2C%2210%2C5%22%3A10%2C%2210%2C4%22%3A10%2C%2210%2C3%22%3A10%7D%7D%2C%22large_world%22%3Afalse%2C%22tokens%22%3A%7B%223%2C10%22%3A10%2C%223%2C9%22%3A10%2C%223%2C8%22%3A10%2C%223%2C7%22%3A10%2C%223%2C6%22%3A10%2C%223%2C5%22%3A10%2C%223%2C4%22%3A10%2C%223%2C3%22%3A10%7D%7D&amp;editor=%23%20fertilizer.%20Move%20the%20bags%20of%20fertilizer%20to%20their%20sheds%0Afrom%20my_lib%20import%20*%0Athink(50)%0A%0Adef%20move_bag()%3A%0A%20%20%20%20move()%0A%20%20%20%20repeat(take%2C%2010)%0A%20%20%20%20repeat(move%2C%207)%0A%20%20%20%20repeat(put%2C%2010)%0A%20%20%20%20%0Adef%20go_back()%3A%0A%20%20%20%20turn_around()%0A%20%20%20%20repeat(move%2C%208)%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20%0Adef%20move_bag_to_shed()%3A%0A%20%20%20%20move_bag()%0A%20%20%20%20go_back()%0A%0A%23%20main%20function%0Arepeat(move_bag_to_shed%2C%208)%0Asay(%20%22Time%20to%20take%20a%20shower%22%20)&amp;library=%23%20%27from%20my_lib%20import%20*%27%20in%20Python%20Code%20is%20required%20to%20use%0A%23%20the%20code%20in%20this%20library.%20%0A%0Asound(True)%20%20%20%20%23%20turn%20sound%20effects%20on%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%20%20%20%20%0Adef%20turn_around()%3A%0A%20%20%20%20repeat(turn_left%2C%202)%0A%20%20%20%20%0Adef%20right()%3A%0A%20%20%20%20repeat(turn_left%2C%203)%0A%20%20%20%20%0Adef%20sidestep_right()%3A%0A%20%20%20%20right()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20%0Adef%20sidestep_left()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20right()">보여주기</a></p>
+<h4 id="학년---올림픽-신화---스피드-스케이팅">6학년 - 올림픽 신화 - 스피드 스케이팅</h4>
+<p><a href="http://codeperspectives.com/reeborg-dev/world.html?proglang=python-en&amp;world=%7B%22robots%22%3A%5B%7B%22x%22%3A6%2C%22y%22%3A8%2C%22tokens%22%3A0%2C%22orientation%22%3A2%2C%22_prev_x%22%3A6%2C%22_prev_y%22%3A8%2C%22_prev_orientation%22%3A2%2C%22start_positions%22%3A%5B%5B6%2C8%5D%5D%7D%5D%2C%22walls%22%3A%7B%2210%2C5%22%3A%5B%22east%22%5D%2C%229%2C3%22%3A%5B%22north%22%5D%2C%228%2C3%22%3A%5B%22north%22%5D%2C%226%2C4%22%3A%5B%22east%22%5D%2C%226%2C5%22%3A%5B%22east%22%2C%22north%22%5D%2C%228%2C8%22%3A%5B%22north%22%5D%2C%229%2C8%22%3A%5B%22north%22%5D%2C%2210%2C7%22%3A%5B%22north%22%5D%2C%2210%2C6%22%3A%5B%22east%22%2C%22north%22%5D%2C%229%2C4%22%3A%5B%22east%22%5D%2C%227%2C5%22%3A%5B%22east%22%5D%2C%227%2C7%22%3A%5B%22east%22%5D%2C%228%2C7%22%3A%5B%22north%22%5D%2C%229%2C7%22%3A%5B%22north%22%5D%2C%222%2C11%22%3A%5B%22north%22%5D%2C%223%2C11%22%3A%5B%22north%22%5D%2C%224%2C11%22%3A%5B%22north%22%5D%2C%225%2C11%22%3A%5B%22east%22%2C%22north%22%5D%2C%221%2C11%22%3A%5B%22east%22%5D%2C%221%2C10%22%3A%5B%22east%22%5D%2C%221%2C9%22%3A%5B%22east%22%5D%2C%221%2C8%22%3A%5B%22east%22%5D%2C%222%2C7%22%3A%5B%22north%22%5D%2C%223%2C7%22%3A%5B%22north%22%5D%2C%224%2C7%22%3A%5B%22north%22%2C%22east%22%5D%2C%225%2C9%22%3A%5B%22east%22%5D%2C%225%2C10%22%3A%5B%22east%22%5D%2C%223%2C8%22%3A%5B%22north%22%5D%2C%222%2C9%22%3A%5B%22east%22%5D%2C%222%2C10%22%3A%5B%22east%22%5D%2C%223%2C10%22%3A%5B%22north%22%5D%2C%224%2C10%22%3A%5B%22north%22%2C%22east%22%5D%2C%224%2C9%22%3A%5B%22east%22%5D%2C%224%2C8%22%3A%5B%22north%22%5D%2C%224%2C6%22%3A%5B%22north%22%5D%2C%223%2C6%22%3A%5B%22north%22%5D%2C%222%2C6%22%3A%5B%22north%22%5D%2C%221%2C6%22%3A%5B%22east%22%5D%2C%221%2C5%22%3A%5B%22east%22%5D%2C%222%2C5%22%3A%5B%22east%22%5D%2C%223%2C5%22%3A%5B%22north%22%5D%2C%224%2C5%22%3A%5B%22north%22%2C%22east%22%5D%2C%224%2C4%22%3A%5B%22east%22%5D%2C%224%2C3%22%3A%5B%22north%22%5D%2C%223%2C3%22%3A%5B%22north%22%5D%2C%222%2C4%22%3A%5B%22east%22%5D%2C%221%2C4%22%3A%5B%22east%22%5D%2C%221%2C3%22%3A%5B%22east%22%5D%2C%222%2C2%22%3A%5B%22north%22%5D%2C%223%2C2%22%3A%5B%22north%22%5D%2C%224%2C2%22%3A%5B%22north%22%5D%2C%225%2C2%22%3A%5B%22north%22%5D%2C%225%2C3%22%3A%5B%22east%22%5D%2C%225%2C4%22%3A%5B%22east%22%5D%2C%225%2C5%22%3A%5B%22east%22%5D%2C%226%2C3%22%3A%5B%22east%22%5D%2C%227%2C2%22%3A%5B%22north%22%5D%2C%228%2C2%22%3A%5B%22north%22%5D%2C%229%2C2%22%3A%5B%22north%22%5D%2C%2210%2C2%22%3A%5B%22north%22%5D%2C%2210%2C3%22%3A%5B%22east%22%5D%2C%227%2C4%22%3A%5B%22east%22%5D%2C%228%2C5%22%3A%5B%22north%22%5D%2C%229%2C5%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C4%22%3A%5B%22east%22%5D%2C%226%2C8%22%3A%5B%22north%22%5D%2C%226%2C9%22%3A%5B%22east%22%5D%2C%226%2C10%22%3A%5B%22east%22%5D%2C%226%2C11%22%3A%5B%22east%22%5D%2C%227%2C11%22%3A%5B%22north%22%5D%2C%228%2C11%22%3A%5B%22north%22%5D%2C%229%2C11%22%3A%5B%22north%22%5D%2C%2210%2C11%22%3A%5B%22east%22%2C%22north%22%5D%2C%228%2C10%22%3A%5B%22north%22%5D%2C%227%2C10%22%3A%5B%22east%22%5D%2C%227%2C9%22%3A%5B%22east%22%5D%2C%229%2C9%22%3A%5B%22east%22%5D%2C%229%2C10%22%3A%5B%22east%22%2C%22north%22%5D%2C%2210%2C10%22%3A%5B%22east%22%5D%2C%2210%2C9%22%3A%5B%22east%22%5D%2C%228%2C6%22%3A%5B%22north%22%5D%2C%229%2C6%22%3A%5B%22north%22%5D%2C%2210%2C8%22%3A%5B%22east%22%5D%7D%2C%22goal%22%3A%7B%22possible_positions%22%3A%5B%5B6%2C7%5D%5D%2C%22position%22%3A%7B%22x%22%3A6%2C%22y%22%3A7%7D%2C%22tokens%22%3A%7B%226%2C7%22%3A16%7D%7D%2C%22tokens%22%3A%7B%222%2C8%22%3A1%2C%222%2C11%22%3A1%2C%225%2C11%22%3A1%2C%225%2C8%22%3A1%2C%227%2C8%22%3A1%2C%227%2C11%22%3A1%2C%2210%2C11%22%3A1%2C%2210%2C8%22%3A1%2C%227%2C6%22%3A1%2C%2210%2C6%22%3A1%2C%2210%2C3%22%3A1%2C%227%2C3%22%3A1%2C%222%2C6%22%3A1%2C%225%2C6%22%3A1%2C%225%2C3%22%3A1%2C%222%2C3%22%3A1%7D%7D&amp;editor=%23%20Speed%20skating%20-%20collect%20the%20flags%20and%20place%20them%20%0A%23%20at%20the%20podium&amp;library=%23%20%27from%20my_lib%20import%20*%27%20in%20Python%20Code%20is%20required%20to%20use%0A%23%20the%20code%20in%20this%20library.%20%0A%0Asound(True)%20%20%20%20%23%20turn%20sound%20effects%20on%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%20%20%20%20%0Adef%20turn_around()%3A%0A%20%20%20%20repeat(turn_left%2C%202)%0A%20%20%20%20%0Adef%20right()%3A%0A%20%20%20%20repeat(turn_left%2C%203)%0A%20%20%20%20%0Adef%20sidestep_right()%3A%0A%20%20%20%20right()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20%0Adef%20sidestep_left()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20right()">학습 교안</a></p>
+<p><img src="fig/Paulien_van_Deutekom.jpg" width="35%" /> 출처: McSmit-Own 작품, “Paulien van Deutekom (08-12-2007)”, Creative Commons Attribution-Share Alike 3.0-2.5-2.0-1.0, 위키미디어 커먼즈</p>
+<p>카렐이 스케이트를 착용하는 문제를 상상할 수는 없다… 오 그런데… 카렐이 스피드 스케이트 경기장으로 향하고 있다: 정향 클로버 문양 트랙을 한바퀴 도는 경기장. 깃발 16개 모두 집고 나서, 시상대에 깃발을 모두 내려놓는다. 메달일까 아니면 타박상일까?</p>
+<p>메달을 수상할 기회다. 행운을 빈다.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">출발전 …</th>
+<th align="left">… 종료후</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><img src="fig/1-4-speed-skating1-300x300.png" width="100%" /></td>
+<td align="left"><img src="fig/1-4-speed-skating-solution-300x300.png" width="100%" /></td>
+</tr>
+</tbody>
+</table>
+<p>해답: <a href="http://codeperspectives.com/reeborg-dev/world.html?proglang=python-en&amp;world=%7B%22robots%22%3A%5B%7B%22x%22%3A6%2C%22y%22%3A8%2C%22tokens%22%3A0%2C%22orientation%22%3A2%2C%22_prev_x%22%3A6%2C%22_prev_y%22%3A8%2C%22_prev_orientation%22%3A2%2C%22start_positions%22%3A%5B%5B6%2C8%5D%5D%7D%5D%2C%22walls%22%3A%7B%2210%2C5%22%3A%5B%22east%22%5D%2C%229%2C3%22%3A%5B%22north%22%5D%2C%228%2C3%22%3A%5B%22north%22%5D%2C%226%2C4%22%3A%5B%22east%22%5D%2C%226%2C5%22%3A%5B%22east%22%2C%22north%22%5D%2C%228%2C8%22%3A%5B%22north%22%5D%2C%229%2C8%22%3A%5B%22north%22%5D%2C%2210%2C7%22%3A%5B%22north%22%5D%2C%2210%2C6%22%3A%5B%22east%22%2C%22north%22%5D%2C%229%2C4%22%3A%5B%22east%22%5D%2C%227%2C5%22%3A%5B%22east%22%5D%2C%227%2C7%22%3A%5B%22east%22%5D%2C%228%2C7%22%3A%5B%22north%22%5D%2C%229%2C7%22%3A%5B%22north%22%5D%2C%222%2C11%22%3A%5B%22north%22%5D%2C%223%2C11%22%3A%5B%22north%22%5D%2C%224%2C11%22%3A%5B%22north%22%5D%2C%225%2C11%22%3A%5B%22east%22%2C%22north%22%5D%2C%221%2C11%22%3A%5B%22east%22%5D%2C%221%2C10%22%3A%5B%22east%22%5D%2C%221%2C9%22%3A%5B%22east%22%5D%2C%221%2C8%22%3A%5B%22east%22%5D%2C%222%2C7%22%3A%5B%22north%22%5D%2C%223%2C7%22%3A%5B%22north%22%5D%2C%224%2C7%22%3A%5B%22north%22%2C%22east%22%5D%2C%225%2C9%22%3A%5B%22east%22%5D%2C%225%2C10%22%3A%5B%22east%22%5D%2C%223%2C8%22%3A%5B%22north%22%5D%2C%222%2C9%22%3A%5B%22east%22%5D%2C%222%2C10%22%3A%5B%22east%22%5D%2C%223%2C10%22%3A%5B%22north%22%5D%2C%224%2C10%22%3A%5B%22north%22%2C%22east%22%5D%2C%224%2C9%22%3A%5B%22east%22%5D%2C%224%2C8%22%3A%5B%22north%22%5D%2C%224%2C6%22%3A%5B%22north%22%5D%2C%223%2C6%22%3A%5B%22north%22%5D%2C%222%2C6%22%3A%5B%22north%22%5D%2C%221%2C6%22%3A%5B%22east%22%5D%2C%221%2C5%22%3A%5B%22east%22%5D%2C%222%2C5%22%3A%5B%22east%22%5D%2C%223%2C5%22%3A%5B%22north%22%5D%2C%224%2C5%22%3A%5B%22north%22%2C%22east%22%5D%2C%224%2C4%22%3A%5B%22east%22%5D%2C%224%2C3%22%3A%5B%22north%22%5D%2C%223%2C3%22%3A%5B%22north%22%5D%2C%222%2C4%22%3A%5B%22east%22%5D%2C%221%2C4%22%3A%5B%22east%22%5D%2C%221%2C3%22%3A%5B%22east%22%5D%2C%222%2C2%22%3A%5B%22north%22%5D%2C%223%2C2%22%3A%5B%22north%22%5D%2C%224%2C2%22%3A%5B%22north%22%5D%2C%225%2C2%22%3A%5B%22north%22%5D%2C%225%2C3%22%3A%5B%22east%22%5D%2C%225%2C4%22%3A%5B%22east%22%5D%2C%225%2C5%22%3A%5B%22east%22%5D%2C%226%2C3%22%3A%5B%22east%22%5D%2C%227%2C2%22%3A%5B%22north%22%5D%2C%228%2C2%22%3A%5B%22north%22%5D%2C%229%2C2%22%3A%5B%22north%22%5D%2C%2210%2C2%22%3A%5B%22north%22%5D%2C%2210%2C3%22%3A%5B%22east%22%5D%2C%227%2C4%22%3A%5B%22east%22%5D%2C%228%2C5%22%3A%5B%22north%22%5D%2C%229%2C5%22%3A%5B%22north%22%2C%22east%22%5D%2C%2210%2C4%22%3A%5B%22east%22%5D%2C%226%2C8%22%3A%5B%22north%22%5D%2C%226%2C9%22%3A%5B%22east%22%5D%2C%226%2C10%22%3A%5B%22east%22%5D%2C%226%2C11%22%3A%5B%22east%22%5D%2C%227%2C11%22%3A%5B%22north%22%5D%2C%228%2C11%22%3A%5B%22north%22%5D%2C%229%2C11%22%3A%5B%22north%22%5D%2C%2210%2C11%22%3A%5B%22east%22%2C%22north%22%5D%2C%228%2C10%22%3A%5B%22north%22%5D%2C%227%2C10%22%3A%5B%22east%22%5D%2C%227%2C9%22%3A%5B%22east%22%5D%2C%229%2C9%22%3A%5B%22east%22%5D%2C%229%2C10%22%3A%5B%22east%22%2C%22north%22%5D%2C%2210%2C10%22%3A%5B%22east%22%5D%2C%2210%2C9%22%3A%5B%22east%22%5D%2C%228%2C6%22%3A%5B%22north%22%5D%2C%229%2C6%22%3A%5B%22north%22%5D%2C%2210%2C8%22%3A%5B%22east%22%5D%7D%2C%22goal%22%3A%7B%22possible_positions%22%3A%5B%5B6%2C7%5D%5D%2C%22position%22%3A%7B%22x%22%3A6%2C%22y%22%3A7%7D%2C%22tokens%22%3A%7B%226%2C7%22%3A16%7D%7D%2C%22tokens%22%3A%7B%222%2C8%22%3A1%2C%222%2C11%22%3A1%2C%225%2C11%22%3A1%2C%225%2C8%22%3A1%2C%227%2C8%22%3A1%2C%227%2C11%22%3A1%2C%2210%2C11%22%3A1%2C%2210%2C8%22%3A1%2C%227%2C6%22%3A1%2C%2210%2C6%22%3A1%2C%2210%2C3%22%3A1%2C%227%2C3%22%3A1%2C%222%2C6%22%3A1%2C%225%2C6%22%3A1%2C%225%2C3%22%3A1%2C%222%2C3%22%3A1%7D%7D&amp;editor=%23%20Speed%20skating%20-%20collect%20the%20flags%20and%20place%20them%20%0A%23%20at%20the%20podium%0Afrom%20my_lib%20import%20*%0Athink(251)%0A%0Adef%20one_side()%3A%0A%20%20%20%20take()%0A%20%20%20%20repeat(%20move%2C%203%20)%0A%20%20%20%20right()%0A%20%20%20%20%0Adef%20lap()%3A%0A%20%20%20%20repeat(%20one_side%2C%204%20)%0A%20%20%20%20left()%0A%20%20%20%20repeat(%20move%2C%202%20)%0A%20%20%20%20%0Adef%20go_home()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%0A%23%20main%20program%0Amove()%0Arepeat(lap%2C%204)%0Ago_home()%0Arepeat(put%2C%2016)%0Asay(%22Gold%20medal%2C%20yay!%22)&amp;library=%23%20%27from%20my_lib%20import%20*%27%20in%20Python%20Code%20is%20required%20to%20use%0A%23%20the%20code%20in%20this%20library.%20%0A%0Asound(True)%20%20%20%20%23%20turn%20sound%20effects%20on%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%20%20%20%20%0Adef%20turn_around()%3A%0A%20%20%20%20repeat(turn_left%2C%202)%0A%20%20%20%20%0Adef%20right()%3A%0A%20%20%20%20repeat(turn_left%2C%203)%0A%20%20%20%20%0Adef%20sidestep_right()%3A%0A%20%20%20%20right()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20%0Adef%20sidestep_left()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20right()">보여주기</a></p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>케이크 윗분에 딸기 과일을 올린 케이크.<br />늘 그렇듯이, 라이브러리에 나온 함수를 이용하자.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
         </div>
       </div>
       </article>
