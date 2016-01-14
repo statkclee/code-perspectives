@@ -27,6 +27,8 @@ subtitle: 파이썬, 리보그, 러플
 1.  [정수](cp-integers.html)
 1.  [카렐, 리보그 세상](cp-karel-reeborg.html)
 1.  [함수](cp-function.html)
+1.  [조건(if/else)](cp-condition.html)
+
 
 > ## 참고 문헌 {.prereq}
 >

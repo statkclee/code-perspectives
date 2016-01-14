@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="pandoc">
+    <title>xwMOOC: 프로그래밍과 문제해결</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/swc.css" />
+    <link rel="alternate" type="application/rss+xml" title="Software Carpentry Blog" href="http://software-carpentry.org/feed.xml"/>
+    <meta charset="UTF-8" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    </script>
+  </head>
+  <body class="lesson">
+    <div class="container card">
+      <div class="banner">
+        <a href="http://xwmooc.net" title="xwMOOC">
+          <img alt="xwMOOC banner" src="img/xwMOOC.png" />
+        </a>
+      </div>
+      <article>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h1 class="title">프로그래밍과 문제해결</h1>
+          <h2 class="subtitle">함수</h2>
+<blockquote>
+<p>“결정, 결정, 결정”</p>
+</blockquote>
+<h3 id="부울-부울-연산자">부울, 부울 연산자</h3>
+<p>부울(boolean)은 단지 두값만 갖는 자료형이다: 참과 거짓(True, False). 핵심 연산자 3개가 다음에 나와 있다.</p>
+<pre class="sourceCode python"><code class="sourceCode python">not     <span class="co"># 부울 값을 켰다 껐다(토글) 한다.</span>
+and     <span class="co"># 모든 피연산자가 참이면 참이 된다.</span>
+or      <span class="co"># 피연산자 중 참이 있다면, 참이 된다.</span></code></pre>
+<p><img src="fig/peter-886132_640-624x402.jpg" width="35%" /></p>
+<p>예를 들어: <a href="http://www.codeskulptor.org/#user40_FAprm5xYmpoMWdi.py">시도해 보기</a></p>
+<pre class="sourceCode python"><code class="sourceCode python">name = <span class="st">&quot;Peter&quot;</span>
+age = <span class="dv">10</span>
+ 
+<span class="dt">print</span>(<span class="st">&quot;expressions involving name&quot;</span>)
+a = (name == <span class="st">&quot;Mark&quot;</span>)
+<span class="dt">print</span>( a )
+b = (name == <span class="st">&quot;Peter&quot;</span>)
+<span class="dt">print</span>( b )
+ 
+c = (age == <span class="dv">10</span>)
+d = (age == <span class="dv">50</span>)
+ 
+<span class="dt">print</span>( b )       <span class="co"># 거짓: 이름이 Peter면 거짓이다.</span>
+<span class="dt">print</span>( not b )   <span class="co"># 참: a 의 반대</span>
+<span class="dt">print</span>(<span class="st">&quot;&quot;</span>)
+ 
+<span class="dt">print</span>(<span class="st">&quot;And operations&quot;</span>)
+<span class="dt">print</span>( a )       <span class="co"># 참: 이름이 Mark면 참이다.</span>
+<span class="dt">print</span>( a and c ) <span class="co"># 참: 이름이 Mark고, 나이가 10이면 참이다.</span>
+<span class="dt">print</span>( a and d ) <span class="co"># 거짓: 이름이 Mark로 맞지만, 나이는 50이 아니다.</span>
+<span class="dt">print</span>(<span class="st">&quot;&quot;</span>)
+ 
+<span class="dt">print</span>(<span class="st">&quot;Or operations&quot;</span>)
+<span class="dt">print</span>( a or c )  <span class="co"># 참: 이름이 Mark라서, 나이에 관계없이 참이다.</span>
+<span class="dt">print</span>( a or c )  <span class="co"># 참: 나이가 10이라서, 이름에 관계없이 참이다.</span>
+<span class="dt">print</span>( b or d )  <span class="co"># 거짓: 이름이 Peter가 아니고, 나이도 50이 아니다.</span>
+<span class="dt">print</span>(<span class="st">&quot;&quot;</span>)
+ 
+<span class="dt">print</span>(<span class="st">&quot;Expression&quot;</span>)
+value = (a and b) or not(a or c or d)
+<span class="dt">print</span>( value )</code></pre>
+<p>이제 부울 표현식을 받아서, 값으로 축약한다:</p>
+<pre class="sourceCode python"><code class="sourceCode python">(a and b) or not(a or c or d) = (<span class="ot">True</span> and <span class="ot">False</span>) or not(<span class="ot">True</span> or <span class="ot">True</span> or <span class="ot">False</span>)
+                                = (<span class="ot">False</span>) or not(<span class="ot">True</span>)
+                                = <span class="ot">False</span> or <span class="ot">False</span>
+                                = <span class="ot">False</span></code></pre>
+<h3 id="카렐-부울-함수">카렐 부울 함수</h3>
+<p>다음에 카렐이 세상을 감지하고 인식하는데, 사용하는 부울 함수가 나와 있다.</p>
+<pre class="sourceCode python"><code class="sourceCode python">front_is_clear()    <span class="co"># 참: 카렐 전방에 벽이 없다면</span>
+is_facing_north()   <span class="co"># 참: 카렐이 북쪽을 향해 있다면</span>
+token_here()        <span class="co"># 참: 카렐이 위치한 셀에 적어도 토큰이 하나 있다면</span>
+has_token()         <span class="co"># 참: 토큰 가방이 비어있지 않다면</span>
+at_goal()           <span class="co"># 참: 카렐이 정사각형 집에 있다면</span></code></pre>
+<p>상기 함수중 아무것이나 호출하면, 호출된 함수는 부울 값을 반환한다. 예를 들어, 다음 이미지에 나타난 상황은 다음과 같다…</p>
+<p><img src="fig/3-example.jpg" width="35%" /></p>
+<pre class="sourceCode python"><code class="sourceCode python">front_is_clear() == <span class="ot">False</span>   <span class="co"># 거짓: 전방에 장매물이 없다면</span>
+is_facing_north() == <span class="ot">True</span>   <span class="co"># 참: 카렐이 북쪽을 향하고 있다면</span>
+token_here() == <span class="ot">True</span>        <span class="co"># 참: 카렐이 토큰을 가지고 있다면</span></code></pre>
+<h3 id="조건문---if-else">조건문 - if / else</h3>
+<p><img src="fig/woman-687560_640-624x468.jpg" width="35%" /></p>
+<p>카렐은 결정을 내리는데 감각인지 함수로, <code>if / else</code> 구조를 사용한다. <code>if / else</code> 구조는 다음과 같이 생겼다:</p>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">if</span> &lt;조건&gt;:       <span class="co"># &lt;조건&gt;이 참이면 -&gt; &#39;if&#39;문 몸통부문을 실행한다.</span>
+    명령어 <span class="dv">1</span>         <span class="co"># &#39;if&#39;문 몸통부문 시작</span>
+    명령어 <span class="dv">2</span>
+    ...
+    명령어 n         <span class="co"># &#39;if&#39;문 몸통부문 끝</span>
+<span class="kw">else</span>:                 <span class="co"># &lt;조건&gt; 이 거짓이면 -&gt; &#39;else&#39;문 몸통부문 시작 </span>
+    명령어 a         <span class="co"># &#39;else&#39;문 몸통부문 시작</span>
+    명령어 b
+    ...
+    명령어 z         <span class="co"># &#39;else&#39;문 몸통부문 끝</span></code></pre>
+<p>조건이 <strong>참</strong> 이면, 카렐은 <code>if</code> 문 몸통부문 명령어를 실행한다; 그렇지 않으면, <code>else</code> 문 몸통부문 명령어를 실행한다. 조건 구조에서 <code>else</code> 부분은 선택옵션 사항이다.</p>
+<h3 id="상보함수">상보함수</h3>
+<p>카렐 감각인지 함수는 제한되어 있어, 자연스럽게 카렐에게 말을 할 수 있도록 허용되지 않는다. 예를 들어, “전방에 장애물이 없지 않다”, <code>not front_is_clear()</code> 라고 말하는 것이 아니라, 대신에 “장방에 벽”, <code>wall_in_front()</code> 이라고 표현한다. 서로 상반되는 함수를 <em>상보함수(complementary function)</em>라고 부른다.</p>
+<p><img src="fig/yin-yang-38646__180.png" width="25%" /></p>
+<p>카렐에 내장된 감각인지 함수에 대한 상보함수가 다음에 나와 있다:</p>
+<pre class="sourceCode python"><code class="sourceCode python"> <span class="co"># front_is_clear() 상보함수</span>
+<span class="kw">def</span> wall_in_front():
+    <span class="kw">return</span> not front_is_clear()
+ 
+<span class="co"># token_here() 상보함수</span>
+<span class="kw">def</span> cell_is_empty():
+    <span class="kw">return</span> not token_here()
+ 
+<span class="co"># has_token() 상보함수</span>
+<span class="kw">def</span> bag_is_empty():
+    <span class="kw">return</span> not has_token()</code></pre>
+<p>상기 상보함수를 라이브러리에 추가한다.</p>
+<h3 id="훈련-작업임무">훈련 작업임무</h3>
+<h4 id="tm1.-남가주socal-생활---길-닦기">TM1. 남가주(SoCal) 생활 - 길 닦기</h4>
+        </div>
+      </div>
+      </article>
+      <div class="footer">
+        <a class="label swc-blue-bg" href="http://xwmooc.net">xwMOOC</a>
+        <a class="label swc-blue-bg" href="https://github.com/statkclee/raspberry-pi">Source</a>
+        <a class="label swc-blue-bg" href="mailto:i@xwmooc.net">Contact</a>
+        <a class="label swc-blue-bg" href="LICENSE.html">License</a>
+      </div>
+    </div>
+    <!-- Javascript placed at the end of the document so the pages load faster -->
+    <script src="http://software-carpentry.org/v5/js/jquery-1.9.1.min.js"></script>
+    <script src="css/bootstrap/bootstrap-js/bootstrap.js"></script>
+  </body>
+</html>
