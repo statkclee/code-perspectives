@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="pandoc">
+    <title>xwMOOC: 프로그래밍과 문제해결</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/swc.css" />
+    <link rel="alternate" type="application/rss+xml" title="Software Carpentry Blog" href="http://software-carpentry.org/feed.xml"/>
+    <meta charset="UTF-8" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    </script>
+  </head>
+  <body class="lesson">
+    <div class="container card">
+      <div class="banner">
+        <a href="http://xwmooc.net" title="xwMOOC">
+          <img alt="xwMOOC banner" src="img/xwMOOC.png" />
+        </a>
+      </div>
+      <article>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <h1 class="title">프로그래밍과 문제해결</h1>
+          <h2 class="subtitle">함수</h2>
+<blockquote>
+<p>“절대로, 절대로, 절대 포기하지 마라”<br />
+“Never, never, never give up”<br />
+— Churchill</p>
+</blockquote>
+<h3 id="재귀">재귀</h3>
+<p>재귀는 함수 자신을 반복해서 호출해서 점진적으로 동일한 문제를 작은 문제로 풀어나가는 기법이다. 모든 재귀 함수는 다음과 유사한 견본모양을 취한다:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> <span class="op">&lt;</span>함수명<span class="op">&gt;</span>:
+    <span class="cf">if</span> <span class="op">&lt;</span>기본 조건<span class="op">&gt;</span>:   <span class="co"># 문제가 해결되었거나 거의 해결되었나?</span>
+        <span class="op">&lt;</span>기본 사례<span class="op">&gt;</span>        <span class="co"># 해결한다.</span>
+        <span class="cf">return</span>
+   <span class="cf">else</span>:                   <span class="co"># 그렇지 않은 경우 문제가 해결되지 않았다면...</span>
+        <span class="op">&lt;</span>재귀 사례<span class="op">&gt;</span>   <span class="co"># ...문제를 조금 축소한다... 그리고...</span>
+        <span class="op">&lt;</span>재귀 호출<span class="op">&gt;</span>   <span class="co"># ...다시 문제를 풀려고 시도한다.</span>
+        <span class="cf">return</span></code></pre></div>
+        </div>
+      </div>
+      </article>
+      <div class="footer">
+        <a class="label swc-blue-bg" href="http://xwmooc.net">xwMOOC</a>
+        <a class="label swc-blue-bg" href="https://github.com/statkclee/raspberry-pi">Source</a>
+        <a class="label swc-blue-bg" href="mailto:i@xwmooc.net">Contact</a>
+        <a class="label swc-blue-bg" href="LICENSE.html">License</a>
+      </div>
+    </div>
+    <!-- Javascript placed at the end of the document so the pages load faster -->
+    <script src="http://software-carpentry.org/v5/js/jquery-1.9.1.min.js"></script>
+    <script src="css/bootstrap/bootstrap-js/bootstrap.js"></script>
+  </body>
+</html>
