@@ -29,6 +29,7 @@ subtitle: 파이썬, 리보그, 러플
 1.  [함수](cp-function.html)
 1.  [조건(if/else)](cp-condition.html)
 1.  [재귀](cp-recursion.html)
+1.  [While 루프](cp-while.html)
 
 
 > ## 참고 문헌 {.prereq}
