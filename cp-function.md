@@ -7,7 +7,7 @@ subtitle: 함수
 > "천문학이 망원경에 관한 것이 아니듯이, 컴퓨터 과학은 컴퓨터에 관한 것이 아니다."  
 >
 > "Computer Science is no more about computers than astronomy is about telescopes"  
-> --- Edsger Dijkstra
+> --- Edsger Dijkstra 
 
 
 ### 사용자 정의 함수
