@@ -4,26 +4,37 @@
     <meta charset="utf-8">
     <meta name="generator" content="pandoc">
     <title>xwMOOC: 프로그래밍과 문제해결</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.css" />
-    <link rel="stylesheet" type="text/css" href="css/swc.css" />
-    <link rel="alternate" type="application/rss+xml" title="Software Carpentry Blog" href="http://software-carpentry.org/feed.xml"/>
-    <meta charset="UTF-8" />
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/swc.css" />
+    <link rel="alternate" type="application/rss+xml" title="Software Carpentry Blog" href="http://software-carpentry.org/feed.xml"/>
+    <meta charset="UTF-8" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-59802572-14', 'auto');
+      ga('send', 'pageview');
+    
     </script>
   </head>
   <body class="lesson">
     <div class="container card">
-      <div class="banner">
-        <a href="http://xwmooc.net" title="xwMOOC">
-          <img alt="xwMOOC banner" src="img/xwMOOC.png" />
-        </a>
+      <div class="banner">
+        <a href="http://xwmooc.net" title="xwMOOC">
+          <img alt="xwMOOC banner" src="img/xwMOOC.png" />
+        </a>
       </div>
       <article>
       <div class="row">
@@ -32,15 +43,16 @@
           <h2 class="subtitle">While 루프</h2>
 <blockquote>
 <p>“계속 헤엄처라… 계속 헤엄처라…”</p>
-<p>“Just keep swimming.. just keep swimming.”<br />— Dory</p>
+<p>“Just keep swimming.. just keep swimming.”<br />
+— Dory</p>
 </blockquote>
 <h3 id="while-루프">While 루프</h3>
 <p><strong>While 루프 해답:</strong> <a href="http://codeperspectives.com/reeborg-dev/world.html?proglang=python-en&amp;world=%7B%22robots%22%3A%5B%7B%22x%22%3A5%2C%22y%22%3A5%2C%22tokens%22%3A0%2C%22orientation%22%3A-1%2C%22_prev_x%22%3A5%2C%22_prev_y%22%3A5%2C%22_prev_orientation%22%3A-1%2C%22start_positions%22%3A%5B%5B5%2C5%5D%5D%7D%5D%2C%22tokens%22%3A%7B%7D%2C%22walls%22%3A%7B%7D%7D&amp;editor=%23%20solution%20using%20nested%20if%20%2F%20else%0Afrom%20my_lib%20import%20*%0A%0Adef%20face_north()%3A%0A%20%20%20%20while%20not%20is_facing_north()%3A%0A%20%20%20%20%20%20%20%20left()%0A%20%20%20%20%20%20%20%20%0Aface_north()&amp;library=%23%20%27from%20my_lib%20import%20*%27%20in%20Python%20Code%20is%20required%20to%20use%0A%23%20the%20code%20in%20this%20library.%0Asound(True)%0Athink(251)%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()">보여주기</a></p>
 <p>while 루프를 갖는 해답은 짧고, 명료하고, 반복 사이클을 낭비하지 않고, 메모리도 낭비하지 않는다: 목적이 달성되자마자 바로 종료한다.</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="co"># while 루프를 사용한 해답</span>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># while 루프를 사용한 해답</span>
 <span class="kw">def</span> face_north():
-    <span class="kw">while</span> not is_facing_north():
-        left()</code></pre>
+    <span class="cf">while</span> <span class="op">not</span> is_facing_north():
+        left()</code></pre></div>
 <p>재귀와 while 루프는 동일한 작업을 수행한다; 둘은 다른 방식으로 작업을 처리한다. 재귀를 사용해서 문제를 해결하면 재귀적(recursive)이라고 하고; 루프를 사용해서 문제를 해결하면 반복적(iterative)이라고 한다.</p>
 <p>반복적 해법이 재귀적 해법보다 우아하지는 않다. 하지만, 반복적인 해법이 재귀적인 해법처럼 함수 사본 다수가 필요하지 않아서, 보통 더 빠르고, 메모리 측면에서 항상 더 경제성이 있다.</p>
 <h3 id="훈련-임무">훈련 임무</h3>
@@ -68,12 +80,12 @@
 <p><strong>해답:</strong> <a href="http://codeperspectives.com/reeborg-dev/world.html?proglang=python-en&amp;world=%7B%22robots%22%3A%5B%7B%22x%22%3A7%2C%22y%22%3A8%2C%22tokens%22%3A0%2C%22orientation%22%3A1%2C%22_prev_x%22%3A7%2C%22_prev_y%22%3A8%2C%22_prev_orientation%22%3A1%7D%5D%2C%22tokens%22%3A%7B%7D%2C%22walls%22%3A%7B%226%2C11%22%3A%5B%22north%22%5D%2C%227%2C11%22%3A%5B%22north%22%5D%2C%228%2C11%22%3A%5B%22north%22%5D%7D%7D&amp;editor=%23%20TM1%20-%20counting%20steps%20to%20a%20wall%0A%0Adef%20go_to_wall()%3A%0A%20%20%20%20while%20front_is_clear()%3A%20%20%20%23%20test%20the%20condition%0A%20%20%20%20%20%20%20%20move()%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20reduce%20the%20problem%0A%20%0A%23%20main%20program%0Ago_to_wall()&amp;library=%23%20%27from%20my_lib%20import%20*%27%20in%20Python%20Code%20is%20required%20to%20use%0A%23%20the%20code%20in%20this%20library.%0ARUR.MAX_STEPS%20%3D%202000%0A%0Asound(True)%0Athink(251)%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%20%20%20%20%0Adef%20right()%3A%0A%20%20%20%20repeat(%20left%2C%203%20)%0A%20%20%20%20%0Adef%20turn_around()%3A%0A%20%20%20%20repeat(%20left%2C%202%20)%0A%20%20%20%20%0Adef%20sidestep_left()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20right()%0A%20%20%20%20%0Adef%20sidestep_right()%3A%0A%20%20%20%20right()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20%0Adef%20safe_take()%3A%0A%20%20%20%20if%20token_here()%3A%0A%20%20%20%20%20%20%20%20take()%0A%20%20%20%20%20%20%20%20%0Adef%20safe_put()%3A%0A%20%20%20%20if%20has_token()%3A%0A%20%20%20%20%20%20%20%20put()%0A%20%20%20%20%0Adef%20safe_move()%3A%0A%20%20%20%20if%20front_is_clear()%3A%0A%20%20%20%20%20%20%20%20move()%0A%20%20%20%20%20%20%20%20%0Adef%20go_to_wall()%3A%0A%20%20%20%20if%20front_is_clear()%3A%0A%20%20%20%20%20%20%20%20move()%0A%20%20%20%20%20%20%20%20go_to_wall()%0A%0A%23%20sensing%20functions%0A%0Adef%20wall_in_front()%3A%0A%20%20%20%20return%20not%20front_is_clear()%0A%0Adef%20cell_is_empty()%3A%0A%20%20%20%20return%20not%20token_here()%0A%0Adef%20bag_is_empty()%3A%0A%20%20%20%20return%20not%20has_token()%0A%0Adef%20at_home()%3A%0A%20%20%20%20return%20at_goal()">보여주기</a></p>
 <p><img src="fig/backdrop-21534_640.jpg" width="35%" /></p>
 <p>코드는 다음과 같다. 무척 쉽다:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> go_to_wall():
-    <span class="kw">while</span> front_is_clear():   <span class="co"># 조건을 시험한다.</span>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> go_to_wall():
+    <span class="cf">while</span> front_is_clear():   <span class="co"># 조건을 시험한다.</span>
         move()                <span class="co"># 문제를 줄여간다</span>
  
 <span class="co"># 메인 프로그램</span>
-go_to_wall()</code></pre>
+go_to_wall()</code></pre></div>
 <h3 id="학년---길-닦기">3학년 - 길 닦기</h3>
 <p><a href="http://codeperspectives.com/reeborg-dev/world.html?proglang=python-en&amp;world=%7B%22robots%22%3A%5B%7B%22x%22%3A4%2C%22y%22%3A2%2C%22tokens%22%3A%22infinite%22%2C%22orientation%22%3A1%2C%22_prev_x%22%3A4%2C%22_prev_y%22%3A2%2C%22_prev_orientation%22%3A1%2C%22start_positions%22%3A%5B%5B4%2C2%5D%5D%7D%5D%2C%22tokens%22%3A%7B%7D%2C%22walls%22%3A%7B%7D%2C%22goal%22%3A%7B%22tokens%22%3A%7B%224%2C3%22%3A1%2C%224%2C4%22%3A1%2C%224%2C5%22%3A1%2C%224%2C6%22%3A1%2C%224%2C7%22%3A1%7D%2C%22possible_positions%22%3A%5B%5B4%2C8%5D%5D%2C%22position%22%3A%7B%22x%22%3A4%2C%22y%22%3A8%7D%7D%7D&amp;editor=%23%20paving%20the%20way%0A%0Adef%20pave_steps()%3A%0A%20%20%20%20pass%0A%0A%23%20main%20program%0Amove()%0Apave_steps()&amp;library=%23%20%27from%20my_lib%20import%20*%27%20in%20Python%20Code%20is%20required%20to%20use%0A%23%20the%20code%20in%20this%20library.%0ARUR.MAX_STEPS%20%3D%202000%0A%0Asound(True)%0Athink(251)%0A%0Adef%20left()%3A%0A%20%20%20%20turn_left()%0A%20%20%20%20%0Adef%20right()%3A%0A%20%20%20%20repeat(%20left%2C%203%20)%0A%20%20%20%20%0Adef%20turn_around()%3A%0A%20%20%20%20repeat(%20left%2C%202%20)%0A%20%20%20%20%0Adef%20sidestep_left()%3A%0A%20%20%20%20left()%0A%20%20%20%20move()%0A%20%20%20%20right()%0A%20%20%20%20%0Adef%20sidestep_right()%3A%0A%20%20%20%20right()%0A%20%20%20%20move()%0A%20%20%20%20left()%0A%20%20%20%20%0Adef%20safe_take()%3A%0A%20%20%20%20if%20token_here()%3A%0A%20%20%20%20%20%20%20%20take()%0A%20%20%20%20%20%20%20%20%0Adef%20safe_put()%3A%0A%20%20%20%20if%20has_token()%3A%0A%20%20%20%20%20%20%20%20put()%0A%20%20%20%20%0Adef%20safe_move()%3A%0A%20%20%20%20if%20front_is_clear()%3A%0A%20%20%20%20%20%20%20%20move()%0A%20%20%20%20%20%20%20%20%0Adef%20go_to_wall()%3A%0A%20%20%20%20if%20front_is_clear()%3A%0A%20%20%20%20%20%20%20%20move()%0A%20%20%20%20%20%20%20%20go_to_wall()%0A%0A%23%20sensing%20functions%0A%0Adef%20wall_in_front()%3A%0A%20%20%20%20return%20not%20front_is_clear()%0A%0Adef%20cell_is_empty()%3A%0A%20%20%20%20return%20not%20token_here()%0A%0Adef%20bag_is_empty()%3A%0A%20%20%20%20return%20not%20has_token()%0A%0Adef%20at_home()%3A%0A%20%20%20%20return%20at_goal()">학습 교안</a></p>
 <p><img src="fig/away-763918_640.jpg" width="45%" /></p>
@@ -160,15 +172,15 @@ go_to_wall()</code></pre>
         </div>
       </div>
       </article>
-      <div class="footer">
-        <a class="label swc-blue-bg" href="http://xwmooc.net">xwMOOC</a>
-        <a class="label swc-blue-bg" href="https://github.com/statkclee/raspberry-pi">Source</a>
-        <a class="label swc-blue-bg" href="mailto:i@xwmooc.net">Contact</a>
-        <a class="label swc-blue-bg" href="LICENSE.html">License</a>
+      <div class="footer">
+        <a class="label swc-blue-bg" href="http://xwmooc.net">xwMOOC</a>
+        <a class="label swc-blue-bg" href="https://github.com/statkclee/raspberry-pi">Source</a>
+        <a class="label swc-blue-bg" href="mailto:i@xwmooc.net">Contact</a>
+        <a class="label swc-blue-bg" href="LICENSE.html">License</a>
       </div>
     </div>
-    <!-- Javascript placed at the end of the document so the pages load faster -->
-    <script src="http://software-carpentry.org/v5/js/jquery-1.9.1.min.js"></script>
+    <!-- Javascript placed at the end of the document so the pages load faster -->
+    <script src="http://software-carpentry.org/v5/js/jquery-1.9.1.min.js"></script>
     <script src="css/bootstrap/bootstrap-js/bootstrap.js"></script>
   </body>
 </html>

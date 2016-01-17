@@ -4,26 +4,37 @@
     <meta charset="utf-8">
     <meta name="generator" content="pandoc">
     <title>xwMOOC: 프로그래밍과 문제해결</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.css" />
-    <link rel="stylesheet" type="text/css" href="css/swc.css" />
-    <link rel="alternate" type="application/rss+xml" title="Software Carpentry Blog" href="http://software-carpentry.org/feed.xml"/>
-    <meta charset="UTF-8" />
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/swc.css" />
+    <link rel="alternate" type="application/rss+xml" title="Software Carpentry Blog" href="http://software-carpentry.org/feed.xml"/>
+    <meta charset="UTF-8" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-59802572-14', 'auto');
+      ga('send', 'pageview');
+    
     </script>
   </head>
   <body class="lesson">
     <div class="container card">
-      <div class="banner">
-        <a href="http://xwmooc.net" title="xwMOOC">
-          <img alt="xwMOOC banner" src="img/xwMOOC.png" />
-        </a>
+      <div class="banner">
+        <a href="http://xwmooc.net" title="xwMOOC">
+          <img alt="xwMOOC banner" src="img/xwMOOC.png" />
+        </a>
       </div>
       <article>
       <div class="row">
@@ -31,7 +42,9 @@
           <h1 class="title">프로그래밍과 문제해결</h1>
           <h2 class="subtitle">정수</h2>
 <blockquote>
-<p>바보는 궁금해하고, 현명한 사람은 물어본다.<br />The fool wonders, the wise man asks.<br />— Benjamin Disraeli</p>
+<p>바보는 궁금해하고, 현명한 사람은 물어본다.<br />
+The fool wonders, the wise man asks.<br />
+— Benjamin Disraeli</p>
 </blockquote>
 <h3 id="훈련-임무">훈련 임무</h3>
 <p>학생 교안을 클릭한다. 선생님은 학생들이 교안을 채워넣도록 도와 준다.</p>
@@ -40,33 +53,33 @@
 <li><a href="http://www.codeskulptor.org/#user40_0kra14IoJNK03eD.py">선생님 교안</a></li>
 </ul>
 <p><strong>고급(<a href="http://www.codeskulptor.org/#user40_SsV0yMn77uVA2KI.py">교안</a>)</strong>: 문자열과 정수는 매우 다른 자료형이다; 문자열을 사용해서 텍스트를 생성하는 반면에, 정수를 사용해서 세거나, 수학문제를 푼다. 다음과 같은 것을 작업하는 것은 의미가 없다:</p>
-<pre class="sourceCode python"><code class="sourceCode python">result = <span class="st">&quot;hello&quot;</span> + <span class="dv">5</span></code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">result <span class="op">=</span> <span class="st">&quot;hello&quot;</span> <span class="op">+</span> <span class="dv">5</span></code></pre></div>
 <p>종종, 정수를 포함하는 문자열을 수학 계산을 하려고 정수로 변환하거나, 반대로 숫자를 문자열로 변환한다. <code>str()</code> 과 <code>int()</code> 함수를 사용해서 자료형을 다른 자료형으로 변환할 수 있다, 즉, <code>str()</code> 함수는 무언가를 문자령로 <code>int()</code> 함수는 무언가를 정수형으로 변환한다. 따라서, 다음은 작동하지 않는 예제다.</p>
-<pre class="sourceCode python"><code class="sourceCode python">result = <span class="dv">5</span> + <span class="st">&quot;10&quot;</span>                  <span class="co"># 정수와 문자열을 더하면 작동하지 않는다.</span>
-msg = <span class="st">&quot;I am &quot;</span> + <span class="dv">10</span> + <span class="st">&quot; years old&quot;</span>  <span class="co"># 붙이기 기능은 문자열만 작동한다.</span></code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">result <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> <span class="st">&quot;10&quot;</span>                  <span class="co"># 정수와 문자열을 더하면 작동하지 않는다.</span>
+msg <span class="op">=</span> <span class="st">&quot;I am &quot;</span> <span class="op">+</span> <span class="dv">10</span> <span class="op">+</span> <span class="st">&quot; years old&quot;</span>  <span class="co"># 붙이기 기능은 문자열만 작동한다.</span></code></pre></div>
 <p>하지만, 다음은 작동한다:</p>
-<pre class="sourceCode python"><code class="sourceCode python">result = <span class="dv">5</span> + <span class="dt">int</span>(<span class="st">&quot;10&quot;</span>)                  <span class="co"># int(&quot;10&quot;) 값은 정수 10이 된다.</span>
-msg = <span class="st">&quot;I am &quot;</span> + <span class="dt">str</span>(<span class="dv">10</span>) + <span class="st">&quot; years old&quot;</span>  <span class="co"># str(10)  값은 문자열 &quot;10&quot; 이 된다.</span></code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">result <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span> <span class="bu">int</span>(<span class="st">&quot;10&quot;</span>)                  <span class="co"># int(&quot;10&quot;) 값은 정수 10이 된다.</span>
+msg <span class="op">=</span> <span class="st">&quot;I am &quot;</span> <span class="op">+</span> <span class="bu">str</span>(<span class="dv">10</span>) <span class="op">+</span> <span class="st">&quot; years old&quot;</span>  <span class="co"># str(10)  값은 문자열 &quot;10&quot; 이 된다.</span></code></pre></div>
 <h3 id="학년---파이썬으로-하는-산수">3학년 - 파이썬으로 하는 산수</h3>
 <p><a href="http://www.codeskulptor.org/#user40_4enAUHHcmVRoc24.py">학습 교안</a></p>
 <p>파이썬은 수학에 무척 능하다; 파이썬에게 1자리 숫자를 더하는 계산보다 10자리 숫자를 더하는 계산이라고 더 어려운 것은 아니다; 동일한 계산이 뺄셈, 곱셈, 나눗셈에도 적용된다. 따라서, 파이썬이 숙제를 검사하는 프로그램을 작성한다.</p>
 <p>프로그램 시작부분에 두 숫자를 두 변수에 집어넣는다. 예를 들어, <code>number_1</code>, <code>number_2</code>.</p>
-<pre class="sourceCode python"><code class="sourceCode python">number_1 = <span class="dv">5</span>
-number_2 = <span class="dv">3</span></code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">number_1 <span class="op">=</span> <span class="dv">5</span>
+number_2 <span class="op">=</span> <span class="dv">3</span></code></pre></div>
 <p>그리고 나서, 프로그램이 다음을 출력하게 한다:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="dv">5</span> + <span class="dv">3</span> = <span class="dv">8</span>
-<span class="dv">5</span> - <span class="dv">3</span> = <span class="dv">2</span>
-<span class="dv">3</span> - <span class="dv">5</span> = -<span class="dv">2</span>
-<span class="dv">5</span> * <span class="dv">3</span> = <span class="dv">15</span></code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="dv">5</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">=</span> <span class="dv">8</span>
+<span class="dv">5</span> <span class="op">-</span> <span class="dv">3</span> <span class="op">=</span> <span class="dv">2</span>
+<span class="dv">3</span> <span class="op">-</span> <span class="dv">5</span> <span class="op">=</span> <span class="op">-</span><span class="dv">2</span>
+<span class="dv">5</span> <span class="op">*</span> <span class="dv">3</span> <span class="op">=</span> <span class="dv">15</span></code></pre></div>
 <p><img src="fig/numbers-738068_640-300x169.jpg" width="45%" /></p>
 <p>해답: <a href="http://www.codeskulptor.org/#user40_hgc1fHOzrLZhZRE.py">보여주기</a></p>
 <h3 id="학년---이빨-요청-1">4학년 - 이빨 요청 <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></h3>
 <p><a href="http://www.codeskulptor.org/#user40_Lns5UBKZUCA6JqC.py">학습 교안</a></p>
 <p>이빨 요정은 아이들 이빨이 빠지면 선물을 놓고 간다; 종종 선물로 아이 베개 밑에 돈을 놓아 둔다. 만약 이빨 하나당 $2 달러로, 이빨이 20개 있다면, 이빨 요정에서 아이가 얼마나 받을 수 있는지 알려주는 프로그램을 작성한다.</p>
 <p>프로그램 시작부분에 변수로 이빨 갯수와 선물 금액을 지정한다. 그리고, 결과를 출력하는 프로그램을 작성한다:</p>
-<pre class="sourceCode python"><code class="sourceCode python">teeth = <span class="dv">20</span>
-present = $<span class="dv">2</span>
-total = $<span class="dv">40</span></code></pre>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">teeth <span class="op">=</span> <span class="dv">20</span>
+present <span class="op">=</span> $<span class="dv">2</span>
+total <span class="op">=</span> $<span class="dv">40</span></code></pre></div>
 <p>이제 어려운 문제로 가자: 일생동안 <a href="http://wonderopolis.org/wonder/how-many-teeth-do-sharks-have/">일부 상어는 이빨이 50,000 개</a>가 빠진다. 여러분이 만일 이빨 50,000 개가 빠진다면 이빨요정은 얼마의 돈을 놓고 갈지 알아내시오. 만약 이빨 하나당 $2 달러 대신에 $5 달러라면 얼마의 돈을 놓고 갈까?</p>
 <p><img src="fig/shark-47634_640.png" width="30%" /></p>
 <p>정답: <a href="http://www.codeskulptor.org/#user40_wR2qHk7aabEujiR.py">보여주기</a></p>
@@ -75,10 +88,10 @@ total = $<span class="dv">40</span></code></pre>
 <p><code>던젼 앤드 드래곤</code>은 인간, 요정, 난장이 역할을 맡아 모험을 떠나는 게임이다. 흡혈귀로 가득찬 버려진 유적, 혹은 용이 지키고 있는 보물동굴을 탐험해 나간다.</p>
 <p>드래곤 용이 먼저 여러분을 보거나, 혹은 여러분이 용을 제때 탐지할까요? 여러분이 도둑이이고 정말 뛰어난 인지능력을 보유한다면, 20면 주사위를 굴려 8이상 값이 나오면 용을 먼저탐지하고, 여러분이 팔라딘 용사라면, 대신에 먼저 용을 탐지하려면 19이상 값이 나와야 한다.</p>
 <p>20면 주사위라고? 맞습니다… 던젼 앤 드래곤에는 4, 6, 8, 10, 20 면 주사위가 사용된다; 더젼 앤 드래곤(D&amp;D) 주사위를 굴리는 프로그램을 작성할 것이다. <code>a</code> 와 <code>b</code> 사이 숫자를 뽑아내는데 <code>randint(a, b)</code> 함수를 사용한다.</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="co">#  randint 함수를 사용하려면 random 라이브러리를 불러와서 메모리에 적재한다.</span>
-<span class="ch">from</span> random <span class="ch">import</span> randint   
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">#  randint 함수를 사용하려면 random 라이브러리를 불러와서 메모리에 적재한다.</span>
+<span class="im">from</span> random <span class="im">import</span> randint   
  
-roll = randint(<span class="dv">5</span>,<span class="dv">10</span>)         <span class="co"># randint 함수를 사용한다.</span></code></pre>
+roll <span class="op">=</span> randint(<span class="dv">5</span>,<span class="dv">10</span>)         <span class="co"># randint 함수를 사용한다.</span></code></pre></div>
 <p>상기 함수는 5,6,7,8.9,10 값 중 하나를 변수 <code>roll</code>에 할당한다.</p>
 <p>다음 주사위 6개를 굴려서, 다음과 같은 형식으로 굴린 결과를 출력하는 프로그램을 작성한다:</p>
 <pre class="output"><code>You rolled a 2 with the 4-side die
@@ -132,15 +145,15 @@ You rolled a 13 with the 20-side die</code></pre>
         </div>
       </div>
       </article>
-      <div class="footer">
-        <a class="label swc-blue-bg" href="http://xwmooc.net">xwMOOC</a>
-        <a class="label swc-blue-bg" href="https://github.com/statkclee/raspberry-pi">Source</a>
-        <a class="label swc-blue-bg" href="mailto:i@xwmooc.net">Contact</a>
-        <a class="label swc-blue-bg" href="LICENSE.html">License</a>
+      <div class="footer">
+        <a class="label swc-blue-bg" href="http://xwmooc.net">xwMOOC</a>
+        <a class="label swc-blue-bg" href="https://github.com/statkclee/raspberry-pi">Source</a>
+        <a class="label swc-blue-bg" href="mailto:i@xwmooc.net">Contact</a>
+        <a class="label swc-blue-bg" href="LICENSE.html">License</a>
       </div>
     </div>
-    <!-- Javascript placed at the end of the document so the pages load faster -->
-    <script src="http://software-carpentry.org/v5/js/jquery-1.9.1.min.js"></script>
+    <!-- Javascript placed at the end of the document so the pages load faster -->
+    <script src="http://software-carpentry.org/v5/js/jquery-1.9.1.min.js"></script>
     <script src="css/bootstrap/bootstrap-js/bootstrap.js"></script>
   </body>
 </html>
