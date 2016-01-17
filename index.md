@@ -4,7 +4,9 @@ title: 프로그래밍과 문제해결
 subtitle: 파이썬, 리보그, 러플
 ---
 
-언제나 [xwMOOC](http://www.xwmooc.net/)는 기계와의 경쟁을 준비하는 한국인을 위한 최고의 콘텐츠를 제공합니다.
+언제나 [xwMOOC](http://www.xwmooc.net/)는 기계와의 경쟁을 준비하는 한국인을 위한 최고의 콘텐츠를 제공합니다. 본 저작물은 미국 항공우주국(NASA) [JPL(제트 추진 연구소)](http://www.jpl.nasa.gov/) 연구원 안드레 카스타노가 미국 남가주 방과후 교육에 수년에 걸쳐 가다듬은 소프트웨어 및 문제해결 교육 과정입니다.
+
+현재 모습의 "프로그래밍과 문제해결"이 있기까지 리보그 저자 [André Roberge](http://aroberge.blogspot.kr/)의 노력과 더불어 [xwMOOC](http://www.xwmooc.net/) [$100 달러 오픈컴퓨터](http://computer.xwmooc.org/)에서도 손쉽게 큰 돈 들이지 않고 소프트웨어를 활용한 문제해결 교육이 가능하게 구현하였습니다.
 
 > ### 영어 원문 및 한국어 번역 사용허가권 {.getready}
 >
@@ -13,10 +15,11 @@ subtitle: 파이썬, 리보그, 러플
 > The original work of "Programming and Problem Solving" was written in English by Andres Castano, [home.acastano.com/](http://home.acastano.com/). This translation was prepared by permission from Mr. Castano, by Kwangchun Lee.  This work is available under the Creative Commons, NC (Non-Commercial), ND (No Derivatives) license [https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode). 
 
 
-> ## 준비물 {.getready}
+> ## 학습준비 {.getready}
 >
-> [라즈베리 파이 컴퓨터](http://raspberrypi.org/)
-
+> [라즈베리 파이](http://raspberrypi.org/) [^1] [^2]
+> [리보그 설치](reeborg.html)
+> 
 
 ## 학습주제
 		
@@ -48,3 +51,6 @@ subtitle: 파이썬, 리보그, 러플
 >     * [소프트웨어 카펜트리 5.2](http://swcarpentry.xwmooc.org)
 > *   [R 팩키지](http://r-pkgs.xwmooc.org/)
 > *   [통계적 사고](http://r-pkgs.xwmooc.org/)
+
+[^1]: [xwMOOC $100달러 오픈 컴퓨터](http://computer.xwmooc.org/)
+[^2]: [xwMOOC 라즈베리 파이 컴퓨터](http://raspberry-pi.xwmooc.org/) 설치방법 참조
